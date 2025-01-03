@@ -17,3 +17,64 @@ To install the package, run the following command in your project directory:
 ```bash
 npm install react-number-pin-keypad
 ```
+
+## Usage
+
+Here's an example of how to use the **react-number-pin-keypad** in a React application:
+
+### Example Code
+
+```tsx
+import React, { useState } from 'react';
+import { Keypad } from 'react-number-pin-keypad';
+
+const KeypadDemo: React.FC = () => {
+  const [input, setInput] = useState<string>('');
+
+  console.log(input, 'input');
+
+  const handleKeyPress = (key: string) => {
+    setInput((prevInput) => prevInput + key);
+  };
+
+  const handleBackspace = () => {
+    setInput((prevInput) => prevInput.slice(0, -1));
+  };
+
+  return (
+    <div>
+      <div className="mb-4 text-center">
+        <input
+          type="text"
+          value={input}
+          readOnly
+          className="border px-4 py-2 text-center"
+        />
+      </div>
+      <Keypad
+        onKeyPress={handleKeyPress}
+        onBackspace={handleBackspace}
+        className="mx-auto"
+      />
+    </div>
+  );
+};
+
+export default KeypadDemo;
+```
+
+### Explanation of Props
+
+- **`onKeyPress`**: A callback function triggered when a numeric or decimal key is pressed. Receives the pressed key as an argument.
+- **`onBackspace`**: A callback function triggered when the backspace key is pressed.
+- **`className`**: Optional. Additional CSS classes for custom styling.
+
+### Customization
+
+You can use Tailwind CSS classes to customize the appearance of the keypad. Add your own classes to the `Keypad` component using the `className` prop for flexibility.
+
+## GitHub Repository
+
+Find the source code and contribute to this project on GitHub:
+
+[React Number Pin Keypad GitHub Repository](https://github.com/iyiolaosuagwu/react-number-pin-keypad)
