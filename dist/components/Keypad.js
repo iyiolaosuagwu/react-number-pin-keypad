@@ -32,5 +32,5 @@ function Keypad(_a) {
             onKeyPress(key);
         }
     };
-    return (react_1.default.createElement("div", { className: (0, class_name_1.cn)('grid grid-cols-3 gap-2', className) }, keys.map(function (key) { return (react_1.default.createElement(Button_1.Button, { key: key, variant: "ghost", size: "lg", onClick: function () { return handleKeyPress(key); }, className: (0, class_name_1.cn)('h-14 text-xl font-medium rounded-xl hover:bg-gray-100', key === 'backspace' ? 'text-base' : '') }, key === 'backspace' ? (react_1.default.createElement(lucide_react_1.ChevronLeft, { size: 20, strokeWidth: 3 })) : (key))); })));
+    return (react_1.default.createElement("div", { className: (0, class_name_1.cn)('grid grid-cols-3 gap-2', className) }, keys.map(function (key) { return (react_1.default.createElement(Button_1.Button, { key: key, variant: "ghost", size: "lg", onClick: function () { return handleKeyPress(key); }, className: (0, class_name_1.cn)('h-14 text-xl font-medium rounded-xl hover:bg-gray-100', 'flex items-center justify-center', key === 'backspace' ? 'text-base' : '') }, key === 'backspace' ? (react_1.default.createElement(lucide_react_1.ChevronLeft, { size: 20, strokeWidth: 3 })) : (key))); })));
 }

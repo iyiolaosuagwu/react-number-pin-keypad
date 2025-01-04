@@ -12,7 +12,7 @@ A customizable React keypad component styled with Tailwind CSS. This package pro
 
 ## Demo
 
-![React Number Pin Keypad](./src//demo.gif)
+![React Number Pin Keypad](https://res.cloudinary.com/iyiola/image/upload/v1736018166/demo_hcezpz.gif)
 
 You can find a demo in the example folder of the GitHub repository. A redirect link is provided at the bottom of this README.
 
