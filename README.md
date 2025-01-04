@@ -1,4 +1,4 @@
-# React Number Keypad
+# React Number Pin Keypad
 
 A customizable React keypad component styled with Tailwind CSS. This package provides a simple and flexible keypad that can be easily integrated into your React applications.
 
@@ -30,8 +30,6 @@ import { Keypad } from 'react-number-pin-keypad';
 
 const KeypadDemo: React.FC = () => {
   const [input, setInput] = useState<string>('');
-
-  console.log(input, 'input');
 
   const handleKeyPress = (key: string) => {
     setInput((prevInput) => prevInput + key);
