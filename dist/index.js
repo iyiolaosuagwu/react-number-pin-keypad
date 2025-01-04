@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.cn = exports.Button = exports.Keypad = void 0;
-require("./globals.css");
+require("./styles/globals.css");
 var Keypad_1 = require("./components/Keypad");
 Object.defineProperty(exports, "Keypad", { enumerable: true, get: function () { return Keypad_1.Keypad; } });
 var Button_1 = require("./components/Button");
