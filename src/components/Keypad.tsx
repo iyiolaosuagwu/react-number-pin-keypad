@@ -43,6 +43,7 @@ export function Keypad({ onKeyPress, onBackspace, className }: KeypadProps) {
           onClick={() => handleKeyPress(key)}
           className={cn(
             'h-14 text-xl font-medium rounded-xl hover:bg-gray-100',
+            'flex items-center justify-center',
             key === 'backspace' ? 'text-base' : '',
           )}
         >

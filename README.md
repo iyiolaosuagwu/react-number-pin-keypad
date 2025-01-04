@@ -10,6 +10,14 @@ A customizable React keypad component styled with Tailwind CSS. This package pro
 - Backspace functionality
 - Easy to integrate and use
 
+## Demo
+
+![React Number Pin Keypad](./src//demo.gif)
+
+You can find a demo in the example folder of the GitHub repository. A redirect link is provided at the bottom of this README.
+
+Here's a quick demonstration of how the React Number Pin Keypad works:
+
 ## Installation
 
 To install the package, run the following command in your project directory:
