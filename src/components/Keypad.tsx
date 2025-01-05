@@ -52,7 +52,6 @@ export function Keypad({
 
   return (
     <div>
-      {/* Render hidden input for 'pin' type */}
       {type === 'pin' && (
         <HiddenInput
           length={input.length}
