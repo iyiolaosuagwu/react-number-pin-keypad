@@ -21,15 +21,12 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Button = void 0;
-var react_1 = __importDefault(require("react"));
+var jsx_runtime_1 = require("react/jsx-runtime");
 var class_name_1 = require("../utils/class-name");
 var Button = function (_a) {
     var children = _a.children, className = _a.className, _b = _a.variant, variant = _b === void 0 ? 'default' : _b, _c = _a.size, size = _c === void 0 ? 'default' : _c, props = __rest(_a, ["children", "className", "variant", "size"]);
-    return (react_1.default.createElement("button", __assign({ className: (0, class_name_1.cn)('rounded-md font-medium transition-colors', variant === 'default' ? 'bg-blue-500 text-white hover:bg-blue-600' : '', variant === 'ghost' ? 'bg-transparent hover:bg-gray-100' : '', size === 'default' ? 'px-4 py-2 text-sm' : '', size === 'lg' ? 'px-6 py-3 text-base' : '', className) }, props), children));
+    return ((0, jsx_runtime_1.jsx)("button", __assign({ className: (0, class_name_1.cn)('rounded-md font-medium transition-colors', variant === 'default' ? 'bg-blue-500 text-white hover:bg-blue-600' : '', variant === 'ghost' ? 'bg-transparent hover:bg-gray-100' : '', size === 'default' ? 'px-4 py-2 text-sm' : '', size === 'lg' ? 'px-6 py-3 text-base' : '', className) }, props, { children: children })));
 };
 exports.Button = Button;
