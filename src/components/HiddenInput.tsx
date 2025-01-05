@@ -21,7 +21,7 @@ export function HiddenInput({
           key={index}
           className={cn(
             'w-4 h-4 rounded-full',
-            index < length ? 'bg-blue-300' : 'bg-gray-300',
+            index < length ? 'bg-blue-300' : 'bg-black',
             dotClassName,
           )}
         />
