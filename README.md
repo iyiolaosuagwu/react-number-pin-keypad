@@ -8,11 +8,22 @@ A customizable React keypad component styled with Tailwind CSS. This package pro
 - Customizable styling with Tailwind CSS
 - Support for numbers and decimal point
 - Backspace functionality
+- Pin input mode with a hidden input display
 - Easy to integrate and use
 
 ## Demo
 
-![React Number Pin Keypad](https://res.cloudinary.com/iyiola/image/upload/v1736018166/demo_hcezpz.gif)
+```bash
+Keypad demo
+```
+
+![Keypad](https://res.cloudinary.com/iyiola/image/upload/v1736018166/demo_hcezpz.gif)
+
+```bash
+Pin demo
+```
+
+![Pin](https://res.cloudinary.com/iyiola/image/upload/v1736083514/pin-demo_jf5j1p.gif)
 
 You can find a demo in the example folder of the GitHub repository. A redirect link is provided at the bottom of this README.
 
@@ -74,10 +85,16 @@ export default KeypadDemo;
 - **`onKeyPress`**: A callback function triggered when a numeric or decimal key is pressed. Receives the pressed key as an argument.
 - **`onBackspace`**: A callback function triggered when the backspace key is pressed.
 - **`className`**: Optional. Additional CSS classes for custom styling.
+- **`type`**: Determines the mode of the keypad.
+  - `'default'`: Standard keypad with numbers and a decimal point.
+  - `'pin'`: Pin input mode with a hidden input display. The decimal point is hidden in this mode.
+- **`maxLength`**: (Optional) The maximum number of characters for pin input. Default is 4.
+- **`hiddenInputClassName`**: (Optional) Additional CSS classes for customizing the hidden input container in pin mode.
+- **`hiddenInputDotClassName`**: (Optional) Additional CSS classes for customizing the dots displayed in the hidden input for pin mode.
 
 ### Customization
 
-You can use Tailwind CSS classes to customize the appearance of the keypad. Add your own classes to the `Keypad` component using the `className` prop for flexibility.
+You can use Tailwind CSS classes to customize the appearance of the keypad. Add your own classes to the `Keypad` component using the `className` prop for flexibility. You can also style the hidden input and its dots when using the `pin` type by leveraging the `hiddenInputClassName` and `hiddenInputDotClassName` props.
 
 ## GitHub Repository
 
