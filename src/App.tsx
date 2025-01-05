@@ -28,10 +28,8 @@ const App: React.FC = () => {
           onBackspace={handleBackspace}
           className="mx-auto"
           input={input}
-          hiddenInputClassName=""
-          hiddenInputDotClassName=""
           type="pin"
-          maxLength={5}
+          maxLength={4}
         />
         <button
           onClick={() => setInput('')}
