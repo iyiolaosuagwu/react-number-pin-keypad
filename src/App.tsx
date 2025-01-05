@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import { Keypad } from 'react-number-pin-keypad';
+import { Button } from './components/Button';
+import { cn } from './utils/class-name';
+import { Keypad, type KeypadProps } from './components/Keypad';
 
-const KeypadDemo: React.FC = () => {
+export { Keypad, Button, cn };
+export type { KeypadProps };
+
+const App: React.FC = () => {
   const [input, setInput] = useState<string>('');
 
   const handleKeyPress = (key: string) => {
@@ -11,7 +16,6 @@ const KeypadDemo: React.FC = () => {
   const handleBackspace = () => {
     setInput((prevInput) => prevInput.slice(0, -1));
   };
-
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-xl shadow-lg space-y-6 max-w-md w-full">
@@ -19,7 +23,16 @@ const KeypadDemo: React.FC = () => {
         <div className="text-2xl text-center bg-gray-50 p-4 rounded-lg min-h-[60px]">
           {input || 'Enter a number'}
         </div>
-        <Keypad onKeyPress={handleKeyPress} onBackspace={handleBackspace} className="mx-auto" />
+        <Keypad
+          onKeyPress={handleKeyPress}
+          onBackspace={handleBackspace}
+          className="mx-auto"
+          input={input}
+          hiddenInputClassName=""
+          hiddenInputDotClassName=""
+          type="pin"
+          maxLength={5}
+        />
         <button
           onClick={() => setInput('')}
           className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
@@ -31,4 +44,4 @@ const KeypadDemo: React.FC = () => {
   );
 };
 
-export default KeypadDemo;
+export default App;
